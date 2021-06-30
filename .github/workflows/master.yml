@@ -3,9 +3,12 @@ name: Create Release
 on:
   push:
     branches: [ main ]
+  paths-ignore:
+  - README.adoc
+  - .github/**
 
 jobs:
-  codeql:
+  build:
     runs-on: ubuntu-latest
 
     steps:
